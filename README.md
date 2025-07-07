@@ -7,7 +7,7 @@ cool features:
  - just don't look inside the code...
 
 usage:
-```
+```cpp
 // basic matching
 
 rex variable_identifier("(a-z|A-Z|_)(a-z|A-Z|0-9|_)*");
