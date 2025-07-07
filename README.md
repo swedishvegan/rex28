@@ -1,14 +1,11 @@
 # rex28
 header-only regex engine in only 28 lines of cursed c++
 
----
-
 cool features:
  - regex match and search, with O(string_length $\times$ num_states) polynomial time guarantee
  - easy to use, lightweight, no dependencies, header-only
  - just don't look inside the code...
 
----
 usage:
 ```
 // basic matching
