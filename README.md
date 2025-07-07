@@ -30,7 +30,7 @@ example.len; // equals 5
 rex apples("I|like|apples|and|oranges|!");
 const char* sentence = "I do NOT like apples and oranges! They are disgusting...";
 
-while (apples.next(sentence)) printf("%.*s ", apples.len, sentence + apples.pos); // prints out "I like apples and oranges! "
+while (apples.next(sentence)) printf("%.*s ", apples.len, sentence + apples.pos); // prints out "I like apples and oranges ! "
 
 apples.reset(); // Rewinds the search iteration to the beginning
 
