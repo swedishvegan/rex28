@@ -34,4 +34,10 @@ while (apples.next(sentence)) printf("%.*s ", apples.len, sentence + apples.pos)
 
 apples.reset(); // Rewinds the search iteration to the beginning
 
+// greedy matching, useful for writing lexers
+
+rex keyword("keyword");
+
+keyword.matchbeg("keyword is present"); // returns 7, the length of the first match
+keyword.matchbeg("does not start with keyword"); // returns -1 since there is no match starting from the first letter
 ```
