@@ -14,6 +14,7 @@ rex variable_identifier("(a-z|A-Z|_)(a-z|A-Z|0-9|_)*");
 
 variable_identifier.match("varName123"); // returns true
 variable_identifier.match("not a variable"); // returns false
+variable_identifier.match("varName, varName2", 7); // returns true; only checks the first 7 characters
 
 // greedy matching, useful for writing lexers
 
@@ -36,10 +37,10 @@ example.len; // equals 5
 
 rex apples("I|like|apples|and|oranges|!");
 const char* sentence = "I do NOT like apples and oranges! They are disgusting...";
-
 while (apples.next(sentence)) printf("%.*s ", apples.len, sentence + apples.pos); // prints out "I like apples and oranges ! "
 
 apples.reset(); // rewinds the search iteration to the beginning
+// The first and next functions accept an optional length argument like match
 
 // defining variables
 
